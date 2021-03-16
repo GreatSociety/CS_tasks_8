@@ -32,9 +32,9 @@ namespace Tasks8
                 "alfick.demon.44@mail.gv.cz"
             };
 
-            var examples = (from domain in emails select domain.Substring(domain.IndexOf("@")+1, domain.Length - (domain.IndexOf("@")+1))).Distinct().ToList();
+            var examples = (from domain in emails select domain.Substring(domain.IndexOf("@") + 1)).Distinct().ToList();
 
-            foreach(var domain in examples)
+            foreach (var domain in examples)
             {
                 Console.WriteLine("Unique domain: " + domain);
             }
